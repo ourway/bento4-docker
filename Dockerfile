@@ -1,5 +1,5 @@
 FROM alpine:latest as builder
-ARG BENTO4_VERSION=v1.6.0-637
+ARG BENTO4_VERSION=v1.6.0-641
 LABEL maintainer="farsheed.ashouri@gmail.com"
 # Install dependencies
 RUN apk update && apk add --no-cache ca-certificates bash python3 make cmake gcc g++ git
