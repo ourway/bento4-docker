@@ -1,4 +1,4 @@
-FROM alpine:latest as builder
+FROM alpine:3.22.1 as builder
 ARG BENTO4_VERSION=v1.6.0-641
 LABEL maintainer="farsheed.ashouri@gmail.com"
 # Install dependencies
@@ -25,7 +25,7 @@ RUN cd /tmp/bento4 && python3 Scripts/SdkPackager.py x86_64-unknown-linux . cmak
 
 
 # Stage 2 - Create the output image
-FROM alpine:latest
+FROM alpine:3.22.1
 ARG BENTO4_VERSION
 LABEL version=$BENTO4_VERSION
 LABEL maintainer="farsheed.ashouri@gmail.com"
